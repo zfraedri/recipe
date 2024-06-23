@@ -104,7 +104,9 @@ body{
     background-color: var();
     color: var():
 }
-
+img{
+    width: 100%;
+}
 
 
 
