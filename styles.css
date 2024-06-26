@@ -211,6 +211,39 @@ footer{
     grid-area: connect;
 }
 
+
+
+/* shape for topbar? */
+#topbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: #0D0D0D 1px;
+}
+#menusquare {
+    width: calc(20%);
+    height: 100px;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+}
+#logorect {
+    width: calc(60%);
+    height: 100px;
+    background: var(--orange);
+    margin: 0;
+    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+}
+#signinsquare {
+    width: calc(20%);
+    height: 100px;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+}
+
+
+
 /* DROPDOWN MENU STYLES */
 nav {
     display: block;
@@ -253,8 +286,11 @@ nav ul li:last-child{
     text-transform: none;
     font-size: 1.2rem;
 }
-nav ul li p{
-    visibility: hidden;
+nav ul li:last-child p{
+    font-family: var(--font-big);
+    font-size: 20px;
+    padding-top: 0px;
+    color: var(--blk);
 }
 nav li a {
     display:block;
@@ -271,6 +307,9 @@ nav label {
 }
 nav p{
     height: 1px;
+}
+#signin p{
+    height: 1em;
 }
 label span {
     background-color: transparent;
@@ -328,36 +367,48 @@ div {
     display: block;
 }
 
-
-
-/* shape for topbar? */
-#topbar {
+/* MENU */
+menu{
+    list-style: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    box-shadow: #0D0D0D 1px;
+    justify-content: space-evenly;
 }
-#menusquare {
-    width: calc(20%);
-    height: 100px;
-    background: #fff;
-    margin: 0;
-    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+menu li a{
+    text-decoration: none;
+    color:var(--orange);
 }
-#logorect {
-    width: calc(60%);
-    height: 100px;
-    background: var(--orange);
-    margin: 0;
-    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+
+
+/* DETAILS SECTION */
+#details{
+    padding: 15px;
 }
-#signinsquare {
-    width: calc(20%);
-    height: 100px;
-    background: #fff;
-    margin: 0;
-    box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
+#details h2{
+    padding: 20px 0;
 }
+#details dl{
+    display: grid;
+    grid-template-columns: .5fr 1.5fr;
+    row-gap: 10px;
+}
+#details dt{
+    display: inline-block;
+}
+
+/* INGREDIENTS SECTION */
+
+/* DIRECTIONS SECTION */
+
+/* CONNECT */
+
+/* FOOTER SECTION */
+
+
+
+
+
+
 
 
 
