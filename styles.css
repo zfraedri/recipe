@@ -50,7 +50,6 @@ table {
 }
 
 /* MY CODE STUFF */
-
 :root  {
 
 
@@ -67,7 +66,6 @@ table {
     --font-big : "Bebas Neue", sans-serif;
     --font-reg : "montserrat regular", sans-serif;
 }
-
 .montserrat{
     font-family: "Montserrat", sans-serif;
     /* font-optical-sizing: auto; */
@@ -82,7 +80,6 @@ table {
 
 
 /* TYPOGRAPHY HINTS */
-
 h1, h2, h3, nav a, nav span, menu li, #social li, footer{
     font-family: var(--font-big);
     text-align: center;
@@ -93,6 +90,7 @@ nav a, nav span, menu li, #social li, footer{
 h1{
     font-size: 40px;
     background-color: var(--wht);
+    padding-top: 25px;
 }
 h2{
     font-size: 30px;
@@ -134,7 +132,7 @@ body{
     font-family: var(--font-reg);
 }
 main{
-    width: 99%;
+    display: grid;
     background-color: var(--wht);
     width: 100%;
     margin: 0 auto;
@@ -143,54 +141,10 @@ p{
     line-height: 1.25;
     padding: 15px;
 }
-
-/* SIDE DISHES */
-#sidedish{
-    background-color: var(--aqua);
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr;
-    padding: 15px;
-
-}
-#sidedish h2{
-    padding-bottom: 25px;
-}
-#sidedish h3{
-    text-align: left;
-} 
-#sidedish article{
-    display: grid;
-    column-gap: 2em;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "left right";
-}
-article img{
-    grid-area: left;
-    grid-row: 1/5;
-}
-article p, article h3, article div{
-    grid-area: right;
-}
-article h3{
-    grid-row: 1;
-}
-article p{
-    line-height: 1;
-    padding: 0;
-    grid-row: 2;
-}
-article .rating{
-    grid-row: 3;
-}
-article div{
-    grid-row: 4;
-}
-
 img{
     width: 100%;
 }
+
 /* DEFINING GRID AREAS */
 nav{
     grid-area: nav;
@@ -210,8 +164,6 @@ footer{
 #connect{
     grid-area: connect;
 }
-
-
 
 /* shape for topbar? */
 #topbar {
@@ -241,8 +193,6 @@ footer{
     margin: 0;
     box-shadow: 0 8px 8px -1px rgba(0,0,0,.3);
 }
-
-
 
 /* DROPDOWN MENU STYLES */
 nav {
@@ -358,13 +308,32 @@ nav img{
     width: 40px;
 }
 
-
 /* DIV SEARCH */
 #search{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: var(--wht);
+    padding-top: 25px;
 }
-div {
-    display: block;
+#search div {
+    display: flex;
+    align-items: center;
+}
+#search h3{
+    display: none;
+}
+#search label{
+    display: none;
+    height: 1px;
+}
+#search input{
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    grid-column: 2/3;
+}
+#search button{
+    background-color: var(--orange);
 }
 
 /* MENU */
@@ -373,12 +342,12 @@ menu{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 30px 0 15px 0;
 }
 menu li a{
     text-decoration: none;
     color:var(--orange);
 }
-
 
 /* DETAILS SECTION */
 #details{
@@ -397,29 +366,165 @@ menu li a{
 }
 
 /* INGREDIENTS SECTION */
+#ingredients{
+    padding: 25px 0;
+}
+#ingredients ul{
+    padding-top: 15px;
+}
+#ingredients ul li{
+    list-style:disc;
+    padding-left: 15px;
+    margin-left: 35px;
+    line-height: 1.5rem;
+}
 
 /* DIRECTIONS SECTION */
+#directions{
+    padding: 25px 0;
+}
+#directions ol{
+    padding-top: 15px;
+}
+#directions ol li{
+    list-style: decimal;
+    line-height: 1.5rem;
+    padding: 15px;
+    margin-left: 35px;
+}
+
+/* SIDE DISHES */
+#sidedish{
+    background-color: var(--aqua);
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+    padding: 15px;
+
+}
+#sidedish h2{
+    padding-bottom: 25px;
+}
+#sidedish h3{
+    text-align: left;
+} 
+#sidedish article{
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "left right";
+}
+article img{
+    grid-area: left;
+    grid-row: 1/5;
+}
+article p, article h3, article div{
+    grid-area: right;
+}
+article h3{
+    grid-row: 1;
+}
+article p{
+    line-height: 1;
+    padding: 0;
+    grid-row: 2;
+}
+article .rating{
+    grid-row: 3;
+}
+article div{
+    grid-row: 4;
+}
 
 /* CONNECT */
+#connect{
+    width: 100%;
+    background-color: var(--wht);
+}
+#connect h3{
+    padding-top: 15px;
+    visibility: hidden;
+    height: 1px;
+}
+#connect ul{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+#connect li{
+    text-align: center;
+    font-family: var(--font-big);
+    color: var(--orange);
+    font-size: 20px;
+    padding: 25px 0;
+}
 
 /* FOOTER SECTION */
-
-
-
-
-
-
-
-
-
-
-
-
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+footer img{
+    width: 50%;
+    margin: 0 auto;
+    padding: 25px;
+    grid-row: 1/2;
+}
 
 
 
 /* MEDIA RULE MID 768PX -  THINK 2 COLUMNS */
-/* @media screen and (min-width: 768px) {} */
+@media screen and (min-width: 768px) {
+    body{
+        width: 768px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        
+        "nav search"
+        "header header"
+        "main main"
+        "footer connect";
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    #details{
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #details h2{
+        grid-column: 1/4;
+    }
+    #details dl{
+        grid-column: 2/4;
+    }
+    #steps{
+        display: flex;
+        flex-direction: row;
+    }
+    #sidedish{
+        grid-template-columns: 1fr 1fr;
+    }
+    #sidedish h2{
+        grid-column: 1/3;
+    }
+    #connect{
+        background-color: #fff;
+    }
+
+}
 
 /* MEDIA RULE BIG 1280PX -  THINK 4 COLUMNS */
 /* @media screen and (min-width: 1280px) {} */
+
+/* MEDIA RULE PRINT */
+/* @media print {} */
