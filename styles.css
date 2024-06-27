@@ -510,7 +510,10 @@ footer img{
         "main main"
         "footer connect";
     }
-
+    h1{
+        text-align: left;
+        padding: 15px;
+    }
     #topbar{
         width: 768px;
         height: 100px;
@@ -602,7 +605,12 @@ footer img{
     label span, input {
         display: none;
     }
+    menu{
+        position: absolute;
+        width: 768px;;
+        background-color: rgba(255,255,255,.5);
 
+    }
     main{
         grid-template-columns: 1fr;
     }
@@ -637,15 +645,27 @@ footer img{
     body{
         width: 1280px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        "topbar nav nav topbar"
-        "search search search search"
-        "header header header header"
-        "main main main main"
-        "footer footer connect connect";
+    }
+    h1{
+        text-align: center;
     }
     #topbar{
         width: 1280px;
+    }
+    nav ul{
+        top: 0;
+    }
+    #logorect{
+        top: 0px;
+        left:-255px;
+    }
+    #signinsquare{
+        top: -100px;
+        right:-255px;
+    }
+    #search{
+        top: 100px;
+        left: 37.5%;
     }
     main{
         width: 1280px;
@@ -654,13 +674,30 @@ footer img{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    #calltoaction p{
+        line-height: 1.5em;
+        font-size: 1.2em;
+    }
     #bigpic{
         grid-column: 1;
+        display: flex;
+        flex-direction: row;
+    }
+    #bigpic img{
+        width: 75%;
+    }
+    menu, menu li{
+        padding:15px;
+    }
+    menu{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     #description{
         grid-column: 2;
     }
-
     #details{
         grid-column: 1/4;
         display: grid;
@@ -721,8 +758,6 @@ footer img{
     #sidedish h2{
         grid-column: 1/5;
     }
-
-
     footer{
         grid-template-columns: 1fr 1fr;
     }
