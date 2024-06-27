@@ -769,4 +769,19 @@ footer img{
 }
 
 /* MEDIA RULE PRINT */
-/* @media print {} */
+@media print {
+    @page{
+        margin: 0.5in;
+    }
+    body{
+        font-family: serif;
+        page-break-after: avoid;
+        overflow: hidden;
+    }
+    img{
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+}
